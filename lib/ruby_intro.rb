@@ -35,7 +35,7 @@ end
 
 def starts_with_consonant? s
   # YOUR CODE HERE
-   if s !="a" and s !="e" and s !="i" and s !="o" and s !="u" 
+   if s[0] !="a" and s[0] !="e" and s[0] !="i" and s[0] !="o" and s[0] !="u" 
     return true
    else
     return false
