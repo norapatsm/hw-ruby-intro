@@ -58,13 +58,14 @@ class BookInStock
   attr_reader :name
   attr_accessor :price
 
-  def initialize(name, price)
+  def initialize(name, isbn, price)
     @name = name
+    @isbn = isbn
     @price = Float(price)
   end
 
   def show
-    "Name: #{@name}, price: #{@price}"
+    "Name: #{@name}, ISBN: #{@isbn}, price: #{@price}"
   end
 end
 
@@ -79,5 +80,5 @@ puts starts_with_consonant? "app"
 puts binary_multiple_of_4? ("1001010101010111101010100")
 
 
-book = BookInStock.new("Mein Kampf", 33.80)
+book = BookInStock.new("Mein Kampf",123412341234, 33.80)
 puts book.show
