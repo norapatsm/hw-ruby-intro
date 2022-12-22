@@ -16,15 +16,15 @@ end
 
 def sum_to_n? arr, n
   # YOUR CODE HERE
-  counter = 0
-  sum = 0
-  arr.each{|x| 
-  if counter<n
-    sum+=x
-    counter+=1
+  arr.each do |i|
+    arr.inject(i) do |num1,num2|
+      if num1 + num2 == n
+        return true
+      else
+        return false
+      end
+    end
   end
-  }
-  return sum
 end
 # Part 2
 
@@ -73,7 +73,7 @@ end
 puts sum [1,2,3,4]
 puts max_2_sum [1,2,3,4] 
 hello "nor"
-puts sum_to_n?([1,2,3,4],3)
+puts sum_to_n?([1,2,3,4],9)
 puts starts_with_consonant? "nor"
 puts starts_with_consonant? "app"
 puts binary_multiple_of_4? ("1001010101010111101010100")
